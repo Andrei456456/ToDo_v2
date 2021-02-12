@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container1 {
+        max-width: 1100px;
+        margin: auto;
+      }
+      .input-main {
+          max-width: 95%;
+          margin: auto; 
+          text-align: center;
+          background:linear-gradient(to top, #80a2ff -25%, #ffffff 65%, #80a2ff 130%);
+          border-radius: 16px;
+          border-style: solid;
+          border-width: 1px;
+          border-top-color: rgb(119, 119, 119);
+          border-right-color:  rgb(59, 54, 54);
+          border-bottom-color: rgb(59, 54, 54);
+          border-left-color:  rgb(119, 119, 119);
+          padding-top: 5px;
+          padding-bottom: 20px;
+      }        
+      .input-title {
+        min-width: 400px;
+        width: 60%;
+      }
+      .input-date {
+        min-width: 150px;
+        width: 15%;
+      }
+      .input-border {
+        border-radius: 10px;
+        border-width: 1px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+      .input-title:hover,
+      .input-date:hover {
+        background: linear-gradient(135deg, rgb(251, 242, 186),
+          rgb(251, 242, 186) 70%, orange, rgb(243, 158, 0));
+        border-right-color: black;
+      }
+      .input-border:focus {
+        outline: 0;
+        outline-offset: 0;
+        background-color: rgb(251, 242, 186);
+      }
+      .input-button {
+      transition-duration: 0.5s;
+      }
+      .input-button:hover {
+        cursor: pointer;
+        background-color: orange;
+        border-color: black;
+      }
+      .input-button:active {
+        background-color: rgb(214, 116, 3);
+        color: white;
+      }
+
+
+
+      .tasks {
+        max-width: 90%;
+        margin: auto; 
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: rgb(255, 239, 204);
+      }
+      .td-item {
+        max-width: 95%;
+        margin: auto; 
+        border-bottom-style: dashed;
+        border-width: 1px;
+        border-color: grey;
+      }
+
+      .td-item-title {
+        width: 69%;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .td-item-date {
+        width: 15%;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .td-item-buttonSave {
+        background-color: rgb(248, 227, 156);
+      }
+      .td-item-buttonDelete {
+        background-color: rgb(255, 192, 203);
+      }
+      .td-item-button{
+        border-radius: 10px;
+        border-width: 1px;
+        margin-left: 5px;
+        padding-left: 7px;
+        padding-right: 7px;
+        transition-duration: 0.5s;
+      }
+      .td-item-button:focus {
+        outline: 0;
+        outline-offset: 0;
+      }
+      .td-item-buttonSave:enabled:hover {
+        cursor: pointer;
+        background-color: rgb(124, 253, 152);
+        border-color: black;
+      }
+      .td-item-buttonSave:active {
+        color: white;
+        cursor: pointer;
+        background-color: rgb(13, 179, 49);
+        border-color: black;
+      }
+      .td-item-buttonDelete:hover {
+        cursor: pointer;
+        background-color: rgb(236, 98, 121);
+        border-color: black;
+      }
+      .td-item-buttonDelete:active {
+        color: white;
+        cursor: pointer;
+        background-color: rgb(209, 23, 54);
+        border-color: black;
+      }
+      .done-todo {
+        color: rgb(185, 185, 185);
+      }
+      .td-item-buttonSave-true {
+        /* cursor: pointer; */
+        background-color: rgb(49, 231, 89);
+        border-color: rgb(116, 115, 115);
+      }
+      </style>
+</head>
+<body>
+  <div class="container1">
+    <div class="tasks">
+    </div>
+    <div class="create_todo input-main">
+      <input type="text" class="title input-border input-title" placeholder="title"/>
+      <input type="text" class="date input-border input-date" placeholder="day-month-year"/>
+      <button class="btnCreate input-border input-button">Add</button>
+    </div>
+  </div>
+  <script src="todo.js"></script>
+</body>
+</html>
